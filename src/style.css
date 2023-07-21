@@ -66,6 +66,20 @@ body {
   border-radius: 50%;
 }
 
-.game:hs(.cell:is(:hover, :active, :focus)){
-  background-color: var(--bg);
+#resetBtn{
+  font: inherit;
+  border: 0;
+  font-size: 1.3rem;
+  width: 8.5rem;
+  height: 3.2rem;
+  line-height: 1.7;
+  padding-inline: .2rem;
+  padding-block: .6rem;
+  border-radius: 0.525rem;
+  background-color: var(--ttt);
+  color: var(--bg);
+}
+#resetBtn:hover {
+  background-color: var(--txt);
+  scale: 0.98;
 }
