@@ -18,11 +18,20 @@
 
 
 body {
+  color-scheme: light dark;
   background-color: var(--bg);
   color: var(--txt);
   font-family: 'Mulish', Arial, Helvetica, sans-serif;
 }
 
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0D161D;
+    --ttt: #BDD0E1;
+    --txt: #56C2F0;
+  }
+}
 
 .game-container {
   /*style*/
