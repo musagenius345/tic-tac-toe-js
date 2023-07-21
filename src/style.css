@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Varela';
+  src: url('../static/fonts/VarelaRound-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../static/fonts/Mulish-VariableFont_wght.ttf');
+}
+
+
+:root {
+  --bg: #f9f9f9;
+  --txt: #7b7b7b;
+  --ttt: #69A0BF;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--bg);
+  color: var(--txt);
+  font-family: 'Mulish', Arial, Helvetica, sans-serif;
+}
+
+
+.game-container {
+  /*style*/
+  max-width: 100%;
+}
+
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.68rem;
+  background-color: var(--ttt);
+  margin-block: 0.8rem;
+}
+
+.cell {
+  width: 8.5rem;
+  height: 8.5rem;
+  font-size: 6.3rem;
+  background-color: var(--bg);
+  cursor: pointer;
+  font-family: 'Varela', 'Permanent Marker', serif;
+  transition: all 200ms ease-in-out;
+}
+
+
+.centre {
+  display: grid;
+  place-items: center;
+}
+
+:is(.cell) {
+  display: grid;
+  place-items: center;
+}
+.cell:is(:hover, :active, :focus){
+  color: var(--bg);
+  background-color: var(--txt);
+  outline: 3px solid var(--bg);
+  outline-offset: -5px;
+  border-radius: 50%;
+}
+
+.game:hs(.cell:is(:hover, :active, :focus)){
+  background-color: var(--bg);
+}
